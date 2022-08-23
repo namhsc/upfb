@@ -4,11 +4,11 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"start": "node backend/server",
+		"start": "node server",
 		"server": "nodemon backend/server",
 		"client": "npm start --prefix frontend",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "npm install --only=dev && npm install && npm run build"
+		"heroku-postbuild": "npm install --only=dev && npm install && npm run start"
 	},
 	"engines": {
 		"node": "16.16.0"
